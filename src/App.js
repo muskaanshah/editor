@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box } from '@chakra-ui/react';
-import { TopBar } from './components';
+import { Drawer, TopBar } from './components';
 
 function App() {
+  const [drawer, setDrawer] = useState(true);
   return (
     <Box>
-      <TopBar />
+      <TopBar setDrawer={setDrawer} />
+      <Drawer />
     </Box>
   );
 }

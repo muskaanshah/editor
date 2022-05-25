@@ -20,6 +20,7 @@ const colors = {
     400: '#A7A8A9',
     300: '#C2C3C5',
     200: '#A7A8A9',
+    150: '#ECECEC',
     100: '#fdfdfd',
   },
 };
