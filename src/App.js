@@ -4,10 +4,11 @@ import { Drawer, TopBar } from './components';
 
 function App() {
   const [drawer, setDrawer] = useState(true);
+
   return (
     <Box>
       <TopBar setDrawer={setDrawer} />
-      <Drawer />
+      <Drawer setDrawer={setDrawer} drawer={drawer} />
     </Box>
   );
 }

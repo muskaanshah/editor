@@ -24,12 +24,12 @@ import SearchIcon from '@mui/icons-material/Search';
 import { focusNone } from '../styles/globalStyles';
 import { ProfilePopover } from './ProfilePopover';
 
-const TopBar = ({ setDrawer }) => {
+const TopBar = ({ setDrawer, drawerOnToggle }) => {
   return (
     <Box px={4} py={2} position="sticky" top="0">
       <VStack align="flex-start">
         <HStack w="full" spacing={4}>
-          <MenuIcon cursor="pointer" />
+          <MenuIcon cursor="pointer" onClick={() => setDrawer(prev => !prev)} />
           <InputGroup flexGrow="2">
             <InputLeftElement pointerEvents="none" children={<SearchIcon />} />
             <Input variant="filled" placeholder="Search" />
