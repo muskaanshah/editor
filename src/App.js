@@ -1,8 +1,13 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
+import { TopBar } from './components';
 
 function App() {
-  return <Box></Box>;
+  return (
+    <Box>
+      <TopBar />
+    </Box>
+  );
 }
 
 export default App;

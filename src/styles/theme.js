@@ -4,10 +4,10 @@ import {
   withDefaultColorScheme,
 } from '@chakra-ui/react';
 
-const config = {
-  initialColorMode: 'light',
-  useSystemColorMode: false,
-};
+// const config = {
+//   useSystemColorMode: false,
+//   initialColorMode: 'light',
+// };
 
 const colors = {
   gray: {
@@ -29,12 +29,6 @@ const fonts = {
   body: `Roboto, ${base.fonts?.body}`,
 };
 
-const textStyles = {
-  logo: {
-    fontFamily: 'Abel',
-  },
-};
-
 export const components = {
   Button: {
     baseStyle: {
@@ -45,25 +39,25 @@ export const components = {
   },
 };
 
-const styles = {
-  global: props => ({
-    'html, body': {
-      bg: props.colorMode === 'light' ? 'gray.100' : 'gray.900',
-    },
-  }),
-};
+// const styles = {
+//   global: props => ({
+//     'html, body': {
+//       bg: props.colorMode === 'light' ? 'gray.900' : 'gray.100',
+//       color: props.colorMode === 'light' ? 'gray.100' : 'gray.900',
+//     },
+//   }),
+// };
 
 export const theme = extendTheme(
   {
     colors,
     fonts,
-    config,
-    styles,
-    textStyles,
+    // config,
+    // styles,
     components,
   },
   withDefaultColorScheme({
-    colorScheme: 'blue',
-    components: ['Button'],
+    colorScheme: 'red',
+    components: ['Tabs'],
   })
 );
