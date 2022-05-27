@@ -24,13 +24,21 @@ import SearchIcon from '@mui/icons-material/Search';
 import { focusNone } from '../styles/globalStyles';
 import { ProfilePopover } from './ProfilePopover';
 
-const TopBar = ({ setDrawer, drawerOnToggle }) => {
+const TopBar = ({ setDrawer }) => {
   return (
-    <Box px={4} py={2} position="sticky" top="0">
+    <Box px={4} py={2} position="sticky" top="0" bg="white">
       <VStack align="flex-start">
         <HStack w="full" spacing={4}>
-          <MenuIcon cursor="pointer" onClick={() => setDrawer(prev => !prev)} />
-          <InputGroup flexGrow="2">
+          <Box as="span" flexGrow={{ base: 2, md: 0 }}>
+            <MenuIcon
+              cursor="pointer"
+              onClick={() => setDrawer(prev => !prev)}
+            />
+          </Box>
+          <InputGroup
+            flexGrow="2"
+            display={{ base: 'none', md: 'inline-block' }}
+          >
             <InputLeftElement pointerEvents="none" children={<SearchIcon />} />
             <Input variant="filled" placeholder="Search" />
           </InputGroup>
@@ -45,8 +53,12 @@ const TopBar = ({ setDrawer, drawerOnToggle }) => {
             </Text>
           </HStack>
           <NotificationsNoneIcon cursor="pointer" />
-          <ProfilePopover />
+          <ProfilePopover marginLeft={0} />
         </HStack>
+        <InputGroup flexGrow="2" display={{ base: 'inline-block', md: 'none' }}>
+          <InputLeftElement pointerEvents="none" children={<SearchIcon />} />
+          <Input variant="filled" placeholder="Search" />
+        </InputGroup>
         <HStack align="flex-start">
           <Tabs>
             <TabList sx={{ borderBottom: 'none' }}>
