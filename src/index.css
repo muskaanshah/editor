@@ -11,3 +11,13 @@
 	transition: transform 1s;
   transform: translateX(-100%);
 }
+
+.margin-left-open {
+  margin-left: 250px;
+  transition: margin 1s;
+}
+
+.margin-left-closed {
+  margin-left: 0;
+  transition: margin 1s;
+}

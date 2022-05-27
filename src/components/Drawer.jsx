@@ -10,6 +10,8 @@ const Drawer = ({ setDrawer, drawer }) => {
     <Box
       className={`${drawer ? 'drawer-open' : 'drawer-close'}`}
       background="gray.150"
+      position="fixed"
+      left={0}
       px={4}
       py={2}
       w="250px"
@@ -30,7 +32,7 @@ const Drawer = ({ setDrawer, drawer }) => {
       </HStack>
       <VStack align="flex-start" spacing={2} py={2}>
         <MainTask />
-        <Text fontSize="sm" pl={6}>
+        <Text fontSize="sm" pl={8}>
           Collection 1.1
         </Text>
       </VStack>
