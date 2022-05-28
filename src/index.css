@@ -1,1 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,100;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+.drawer-open {
+  /* width: 250px!important; */
+	transition: transform 1s;
+  transform: translateX(0%);
+}
+
+.drawer-close {
+  /* width: 0!important; */
+	transition: transform 1s;
+  transform: translateX(-100%);
+}
+
+.margin-left-closed, .margin-left-open {
+  margin-left: 0;
+  transition: margin 1s;
+}
+
+.disable-scroll{
+  overflow-y: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+  .margin-left-open {
+    margin-left: 250px;
+    transition: margin 1s;
+  }
+}
+
