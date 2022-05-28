@@ -5,7 +5,14 @@ const EditableDiv = ({ drawer }) => {
     <Box
       p={{ base: 4, md: 8 }}
       className={`${drawer ? 'margin-left-open' : 'margin-left-closed'}`}
+      position="relative"
     >
+      <Box
+        display={{ base: `${drawer ? 'block' : 'none'}`, md: 'none' }}
+        position="absolute"
+        inset="0"
+        bg="blackAlpha.600"
+      ></Box>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget
         fermentum ex, ac condimentum leo. Donec finibus velit id metus malesuada

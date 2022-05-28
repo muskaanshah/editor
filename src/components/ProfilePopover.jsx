@@ -1,7 +1,6 @@
 import {
   Avatar,
   AvatarBadge,
-  Button,
   Divider,
   HStack,
   Popover,

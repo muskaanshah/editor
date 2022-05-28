@@ -17,6 +17,7 @@ const Drawer = ({ setDrawer, drawer }) => {
       w="250px"
       maxH="calc(100vh - 104px)"
       minH="calc(100vh - 104px)"
+      zIndex="2"
     >
       <HStack w="full" color="gray.700">
         <Text fontSize="sm" flexGrow="1">

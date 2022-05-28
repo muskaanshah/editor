@@ -26,7 +26,7 @@ import { ProfilePopover } from './ProfilePopover';
 
 const TopBar = ({ setDrawer }) => {
   return (
-    <Box px={4} py={2} position="sticky" top="0" bg="white">
+    <Box px={4} py={2} position="sticky" top="0" bg="white" zIndex="3">
       <VStack align="flex-start">
         <HStack w="full" spacing={4}>
           <Box as="span" flexGrow={{ base: 2, md: 0 }}>
@@ -55,7 +55,7 @@ const TopBar = ({ setDrawer }) => {
           <NotificationsNoneIcon cursor="pointer" />
           <ProfilePopover marginLeft={0} />
         </HStack>
-        <InputGroup flexGrow="2" display={{ base: 'inline-block', md: 'none' }}>
+        <InputGroup flexGrow="1" display={{ base: 'inline-block', md: 'none' }}>
           <InputLeftElement pointerEvents="none" children={<SearchIcon />} />
           <Input variant="filled" placeholder="Search" />
         </InputGroup>

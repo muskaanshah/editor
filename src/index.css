@@ -12,12 +12,19 @@
   transform: translateX(-100%);
 }
 
-.margin-left-open {
-  margin-left: 250px;
-  transition: margin 1s;
-}
-
-.margin-left-closed {
+.margin-left-closed, .margin-left-open {
   margin-left: 0;
   transition: margin 1s;
 }
+
+.disable-scroll{
+  overflow-y: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+  .margin-left-open {
+    margin-left: 250px;
+    transition: margin 1s;
+  }
+}
+
